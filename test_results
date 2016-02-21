@@ -1,0 +1,52 @@
+v1 = Vote({'a': 1, 'b': 2, 'c': 3})
+v2 = Vote({'a': 2, 'b': 3, 'c': 1})
+v3 = Vote({'a': 2, 'b': 3, 'c': 1})
+v4 = Vote({'a': 1, 'b': 3, 'c': 2})
+v5 = Vote({'a': 3, 'b': 1, 'c': 2})
+v6 = Vote({'d': 2, 'b': 1})
+v7 = Vote({'a': 2, 'e': 1, 'f': 3})
+
+r1:
+a = 2
+b = 2
+c = 2
+d = 0
+e = 1
+f = 0
+total = 7
+
+eliminate by default: d, f
+eliminate: e
+
+---------
+
+v1 = Vote({'a': 1, 'b': 2, 'c': 3})
+v2 = Vote({'a': 2, 'b': 3, 'c': 1})
+v3 = Vote({'a': 2, 'b': 3, 'c': 1})
+v4 = Vote({'a': 1, 'b': 3, 'c': 2})
+v5 = Vote({'a': 3, 'b': 1, 'c': 2})
+v6 = Vote({'b': 1})
+v7 = Vote({'a': 1})
+
+r2:
+a = 3
+b = 2
+c = 2
+total = 7
+
+eliminate: b, c
+
+---------
+
+v1 = Vote({'a': 1})
+v2 = Vote({'a': 2})
+v3 = Vote({'a': 2})
+v4 = Vote({'a': 1})
+v5 = Vote({'a': 3, 'b': 1, 'c': 2})
+v7 = Vote({'a': 1})
+
+r3:
+a = 6
+total = 6
+
+winner = a
